@@ -1,0 +1,23 @@
+{
+    "contact": {
+        "firstName": "Kinley",
+        "lastName": "Wallace",
+        "email": "coolgal@gmail.net",
+        "favoriteColor": "blue",
+        "birthday": "08/05/1999"
+    }, 
+    "contact2": {
+        "firstName": "Mike",
+        "lastName": "Wallace",
+        "email": "coolguy@gmail.net",
+        "favoriteColor": "white",
+        "birthday": "07/10/1969"
+    }, 
+    "contact3": {
+        "firstName": "Connor",
+        "lastName": "Wallace",
+        "email": "okguy@gmail.net",
+        "favoriteColor": "green",
+        "birthday": "04/07/1996"
+    }
+}

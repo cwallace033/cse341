@@ -1,9 +1,25 @@
-var express = require('express');
-var app = express();
-const port = process.env.PORT || 3000
+const express = require('express');
+const mongodb = require('./db/connect');
+const contactRoutes = require('./routes/contacts');
 
-app.use('/', require('./routes'));
+const port = process.env.PORT || 8080
+const app = express();
 
-app.listen(3000, () => {
-    console.log(`server is running on ${port}.`);
+app
+  .use(express.json())
+  .use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+  })
+  // app.use('/', require('./routes'));
+app.use('/contacts', contactRoutes);
+
+
+mongodb.initDb((err, mongodb) => {
+    if (err) {
+        console.log(err);
+    } else {
+        app.listen(port);
+        console.log(`Connected to MongoDB and listening on ${port}`);
+    }
 });
