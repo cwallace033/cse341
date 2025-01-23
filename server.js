@@ -9,10 +9,10 @@ app
   .use(express.json())
   .use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
+ 
     next();
   })
   app.use('/', require('./routes'));
-// app.use('/contacts', contactRoutes);
 
 
 mongodb.initDb((err, mongodb) => {

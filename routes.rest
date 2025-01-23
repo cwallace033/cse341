@@ -2,6 +2,62 @@ GET http://localhost:8080/contacts/
 ###
 GET http://localhost:8080/contacts/678afe49dbc96b80ae1c91f9
 ###
+//Add a new contact
+POST http://localhost:8080/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "faker@notreal.com",
+    "favoriteColor": "blue",
+    "birthday": "01/23/1990"
+}
+###
+//Update a contact
+PUT http://localhost:8080/contacts/67928e6a6227c2d9b41174da HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "notreal@faker.com",
+    "favoriteColor": "red",
+    "birthday": "02/23/1990"
+}
+###
+//Delete a contact
+DELETE http://localhost:8080/contacts/67928e6a6227c2d9b41174da HTTP/1.1
+
+
+###
 GET https://cse341-hx1h.onrender.com/contacts
 ###
 GET https://cse341-hx1h.onrender.com/contacts/678afe49dbc96b80ae1c91f9
+###
+//Add a new contact
+POST http://localhost:8080/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "faker@notreal.com",
+    "favoriteColor": "blue",
+    "birthday": "01/23/1990"
+}
+###
+//Update a contact
+PUT http://localhost:8080/contacts/67928e6a6227c2d9b41174da HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "notreal@faker.com",
+    "favoriteColor": "red",
+    "birthday": "02/23/1990"
+}
+###
+//Delete a contact
+DELETE http://localhost:8080/contacts/67928e6a6227c2d9b41174da HTTP/1.1
