@@ -75,7 +75,7 @@ const updateData = async (req, res, next) => {
     );
 
     if (result.matchedCount === 1) {
-      return res.status(200).json({ message: 'Contact updated' });
+      return res.status(204).json({ message: 'Contact updated' });
     } else {
       return res.status(404).json({ message: 'Contact not found' });
     }
@@ -92,7 +92,7 @@ const deleteData = async (req, res, next) => {
     const result = await mongodb.getDb().db().collection('contacts').deleteOne({ _id: contactId });
 
     if (result.deletedCount === 1) {
-      return res.status(200).json({ message: 'Contact deleted' });
+      return res.status(204).json({ message: 'Contact deleted' });
     } else {
       return res.status(404).json({ message: 'Contact not found' });
     }
